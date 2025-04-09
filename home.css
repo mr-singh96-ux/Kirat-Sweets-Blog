@@ -84,8 +84,8 @@ body{
 .btn{
     padding: 10px 20px;
     border-radius: 10px;
-    background: #00e6e4;
-    color: #000;
+    background: #ff0078;
+    color: white;
     text-decoration: none;
     text-transform: capitalize;
 }
