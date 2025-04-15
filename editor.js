@@ -27,13 +27,13 @@ const uploadImage = (uploadFile, uploadType) => {
             body: formdata
         }).then(res => res.json())
         .then(data => {
-            if (uploadType == "image"){
-                addImage(data, file.name);
-            } else{
-                bannerPath = `${location.origin}/${data}`;
-                banner.style.backgroundImage = `url("${bannerPath}")`;
-            }
-            })
+    if (uploadType == "image") {
+        addImage(data, file.name);
+    } else {
+        bannerPath = `${location.origin}${data.startsWith('/') ? '' : '/'}${data}`;
+        banner.style.backgroundImage = `url("${bannerPath}")`;
+    }
+})
         }
         else {
             alert("Please upload a valid image file.");
