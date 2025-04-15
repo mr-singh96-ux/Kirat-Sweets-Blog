@@ -48,7 +48,7 @@ app.post('/upload', (req, res) => {
             console.error("Upload error:", err);
             return res.status(500).send("Image upload failed.");
         } else {
-            res.json(`/uploads/${imagename}`);
+            res.json(`uploads/${imagename}`);
         }
     });
 });
